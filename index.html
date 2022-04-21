@@ -27,8 +27,8 @@
 
         <nav class="main-nav">
           <ul class="site-nav list">
-            <li class="item current">
-              <a class="link" href="./index.html">Студия</a>
+            <li class="item">
+              <a class="link current" href="./index.html">Студия</a>
             </li>
             <li class="item">
               <a class="link" href="./portfolio.html">Портфолио</a>
@@ -38,7 +38,7 @@
         </nav>
         <ul class="contacts list">
           <li class="item">
-            <a class="mail link" href="mailto:info@devstudio.com">
+            <a class="link" href="mailto:info@devstudio.com">
               <svg class="social-icon" width="20" height="20">
                 <use href="./images/icons/icons.svg#icon-mail"></use>
               </svg>
@@ -46,12 +46,13 @@
             >
           </li>
           <li class="item">
-            <a class="tel-number link" href="tel:+380961111111"
+            <a class="link" href="tel:+380961111111"
               ><svg class="social-icon" width="20" height="20">
                 <use href="./images/icons/icons.svg#icon-tel">
 
                 </use>
-                </svg>+38 096 111 11 11</a>
+                </svg>+38 096 111 11 11
+            </a>
           </li>
         </ul>
       </div>
@@ -62,13 +63,20 @@
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
 
-          <button class="btn" type="button" name="Заказать услугу">
+          <button
+            class="btn"
+            data-modal-open
+            type="button"
+            name="Заказать услугу"
+          >
             Заказать услугу
           </button>
-          <div class="backdrop is-hidden">
+          <div class="backdrop is-hidden" data-modal>
             <form class="modal">
-              <button class="modal-btn"> <p class="close">X</p>
-
+              <button class="modal-btn" data-modal-close type="button">
+                <svg width="11" height="11">
+                  <use href="./images/icons/icons.svg#icon-x"></use>
+                </svg>
               </button>
             </form>
           </div>
@@ -143,6 +151,7 @@
                 alt="coding"
                 width="370"
               />
+              <p class="text">Десктопные приложения</p>
             </li>
             <li class="list-item">
               <img
@@ -150,6 +159,7 @@
                 alt="phone testing"
                 width="370"
               />
+              <p class="text">Мобильные приложения</p>
             </li>
             <li class="list-item">
               <img
@@ -157,6 +167,7 @@
                 alt="testing on a tablet"
                 width="370"
               />
+              <p class="text">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -594,10 +605,10 @@
             <li class="social-item">
               <a
                 class="social-link"
-                href=""
+                href="https://www.instagram.com/"
                 target="_blank"
                 rel="noreferrer noopener"
-                aria-label="ссылка на twitter"
+                aria-label="ссылка на instagram"
               >
                 <svg class="social-icon" width="20" height="20">
                   <use href="./images/icons/icons.svg#icon-twitter"></use>
@@ -607,10 +618,10 @@
             <li class="social-item">
               <a
                 class="social-link"
-                href=""
+                href="https://www.instagram.com/"
                 target="_blank"
                 rel="noreferrer noopener"
-                aria-label="ссылка на facebook"
+                aria-label="ссылка на instagram"
               >
                 <svg class="social-icon" width="20" height="20">
                   <use href="./images/icons/icons.svg#icon-facebook"></use>
@@ -620,10 +631,10 @@
             <li class="social-item">
               <a
                 class="social-link"
-                href=""
+                href="https://www.instagram.com/"
                 target="_blank"
                 rel="noreferrer noopener"
-                aria-label="ссылка на linkedin"
+                aria-label="ссылка на instagram"
               >
                 <svg class="social-icon" width="20" height="20">
                   <use href="./images/icons/icons.svg#icon-linkedin"></use>
@@ -634,5 +645,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
