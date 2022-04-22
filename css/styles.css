@@ -242,6 +242,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
   top: 0;
   left: 0;
+  z-index: 2;
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -263,7 +264,6 @@ img {
   opacity: 1;
   transition-duration: 500ms, 500ms;
   transition-timing-function: cubic-bezier(0.7, 0.84, 0.44, 1);
-
   min-width: 530px;
   min-height: 580px;
   background-color: #fff;
@@ -408,6 +408,8 @@ img {
 .work .list-item {
   width: 370px;
   position: relative;
+
+  z-index: 1;
 }
 .work .list-item:not(:last-child) {
   margin-right: 30px;
@@ -420,8 +422,8 @@ img {
   bottom: 0;
   left: 0;
 
-text-align: center;
-padding: 27px 0;
+  text-align: center;
+  padding: 27px 0;
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
@@ -429,7 +431,7 @@ padding: 27px 0;
   text-transform: uppercase;
 
   color: #ffffff;
-  background-color: rgba(47, 48, 58, 0.8);;
+  background-color: rgba(47, 48, 58, 0.8);
   margin: 0;
 }
 /*Our team*/
@@ -635,7 +637,6 @@ address a {
 .portfolio {
   padding: 94px 0;
 }
-
 /* Filter */
 
 .filter {
@@ -700,6 +701,7 @@ address a {
 }
 .examp-picture {
   position: relative;
+  overflow: hidden;
 }
 .examples .item:hover .hidden-text {
   transform: translateY(0);
