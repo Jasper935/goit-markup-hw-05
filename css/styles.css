@@ -254,12 +254,14 @@ img {
   left: 0;
   z-index: 2;
   opacity: 1;
-  transition: opacity 500ms cubic-bezier(0.7, 0.84, 0.44, 1);
+  transform: scale(1);
+  transition-duration: 500ms, 500ms;
 }
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  scale: 0;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
@@ -291,8 +293,6 @@ img {
   background-color: #fff;
   border-radius: 50%;
 }
-
-
 
 /*--------------------Sections--------------------------------*/
 
@@ -671,6 +671,7 @@ address a {
   width: 370px;
   margin-bottom: 30px;
   margin-right: 30px;
+  
 }
 .examp-picture {
   position: relative;
@@ -719,6 +720,15 @@ address a {
 .examples .link:hover,
 .examples .link:focus {
   opacity: 1;
+}
+.examples .item.grid-item:hover,
+.examples .item.grid-item:focus{
+  
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 /* ---------------------------Grid--------------------------- */
